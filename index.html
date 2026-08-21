@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chenxi Huang - business operations, marketing, research, and AI learning portfolio."
+    />
+    <title>Chenxi Huang - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+:root {
+  --bg: #070b16;
+  --bg-2: #0b1828;
+  --panel: rgba(26, 42, 64, 0.66);
+  --panel-2: rgba(47, 35, 78, 0.58);
+  --text: #f5f8ff;
+  --muted: #a9b4c7;
+  --dim: #65728b;
+  --cyan: #18d8ff;
+  --violet: #9d5cff;
+  --coral: #ff715d;
+  --line: rgba(24, 216, 255, 0.22);
+  --font: "Inter", Arial, sans-serif;
+  --mono: "DM Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 13% 40%, rgba(127, 73, 255, 0.3), transparent 34%),
+    radial-gradient(circle at 83% 20%, rgba(24, 216, 255, 0.18), transparent 34%),
+    linear-gradient(120deg, #090817 0%, #071221 58%, #081727 100%);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  mask-image: linear-gradient(to bottom, black, transparent 86%);
+}
+
+.cursor-glow {
+  background: radial-gradient(circle, rgba(24, 216, 255, 0.48), rgba(157, 92, 255, 0.16) 38%, transparent 68%);
+  border-radius: 50%;
+  filter: blur(2px);
+  height: 220px;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity 180ms ease;
+  width: 220px;
+  z-index: 50;
+}
+
+.meteor-layer {
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 49;
+}
+
+.meteor {
+  background: linear-gradient(90deg, rgba(24, 216, 255, 0), rgba(24, 216, 255, 0.95), rgba(255, 113, 93, 0.35));
+  border-radius: 999px;
+  box-shadow: 0 0 14px rgba(24, 216, 255, 0.8);
+  height: 3px;
+  pointer-events: none;
+  position: fixed;
+  transform-origin: right center;
+  width: 70px;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+svg {
+  fill: none;
+  height: 23px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.1;
+  width: 23px;
+}
+
+.site-shell {
+  min-height: 100vh;
+  position: relative;
+}
+
+.topbar {
+  align-items: center;
+  background: rgba(7, 11, 22, 0.82);
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  height: 98px;
+  left: 0;
+  padding: 0 clamp(22px, 6vw, 96px);
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(20px);
+}
+
+.logo {
+  align-items: center;
+  background: linear-gradient(135deg, #10c7ea, #1c7dff 55%, #945cff);
+  border-radius: 18px;
+  box-shadow: 0 0 34px rgba(24, 216, 255, 0.62);
+  display: inline-flex;
+  font: 800 18px/1 var(--font);
+  height: 52px;
+  justify-content: center;
+  text-decoration: none;
+  width: 52px;
+}
+
+.tabs {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.tab {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  color: var(--muted);
+  display: inline-flex;
+  font-weight: 800;
+  gap: 11px;
+  min-height: 56px;
+  padding: 0 22px;
+  position: relative;
+}
+
+.tab::after {
+  background: var(--cyan);
+  border-radius: 999px;
+  bottom: 6px;
+  box-shadow: 0 0 18px var(--cyan);
+  content: "";
+  height: 3px;
+  left: 32px;
+  opacity: 0;
+  position: absolute;
+  right: 32px;
+  transform: scaleX(0.4);
+  transition: 180ms ease;
+}
+
+.tab.is-active {
+  background: rgba(24, 216, 255, 0.14);
+  color: var(--cyan);
+}
+
+.tab.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.lang-toggle {
+  align-items: center;
+  background: rgba(7, 24, 42, 0.66);
+  border: 1px solid rgba(24, 216, 255, 0.38);
+  border-radius: 16px;
+  color: var(--cyan);
+  display: inline-flex;
+  font-weight: 800;
+  gap: 10px;
+  height: 50px;
+  justify-content: center;
+  justify-self: end;
+  min-width: 92px;
+}
+
+.view {
+  display: none;
+  min-height: calc(100vh - 98px);
+  padding: clamp(34px, 5vw, 74px) clamp(22px, 6vw, 96px);
+  position: relative;
+}
+
+.view.is-active {
+  display: block;
+}
+
+.intro-view {
+  display: none;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.92fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+}
+
+.intro-view.is-active {
+  display: grid;
+}
+
+.eyebrow,
+.section-kicker,
+.moment-date {
+  color: var(--cyan);
+  font: 500 12px/1.4 var(--mono);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+  display: inline-flex;
+  margin: 0 0 26px;
+  padding: 10px 14px;
+}
+
+.hero-copy {
+  position: relative;
+}
+
+.hero-copy h1 {
+  font-size: clamp(80px, 11vw, 164px);
+  letter-spacing: -0.06em;
+  line-height: 0.84;
+  margin: 0;
+}
+
+.typing-name .word {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 7ch;
+}
+
+.typing-name .letter {
+  color: var(--text);
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(26px) scale(0.96);
+  animation: typePop 560ms cubic-bezier(0.2, 0.9, 0.2, 1.2) forwards;
+}
+
+.typing-name .gradient-word .letter,
+.section-intro h2 span {
+  background: linear-gradient(90deg, var(--cyan), var(--violet) 72%, var(--coral));
+  background-clip: text;
+  color: transparent;
+}
+
+.typing-name::after {
+  animation: caretBlink 900ms steps(1) infinite;
+  background: linear-gradient(var(--cyan), var(--violet));
+  content: "";
+  display: inline-block;
+  height: 0.78em;
+  margin-left: 10px;
+  transform: translateY(8px);
+  width: 5px;
+}
+
+.hero-line {
+  font-size: clamp(26px, 3.2vw, 46px);
+  font-weight: 800;
+  line-height: 1.08;
+  margin: 28px 0 12px;
+}
+
+.hero-body {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 560px;
+}
+
+.hero-actions,
+.quick-facts,
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-actions {
+  margin-top: 20px;
+}
+
+.ghost-action {
+  align-items: center;
+  border-radius: 14px;
+  display: inline-flex;
+  font-weight: 800;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 18px;
+  text-decoration: none;
+}
+
+.ghost-action {
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.explore-action {
+  animation: floatButton 2.4s ease-in-out infinite;
+  box-shadow: 0 16px 34px rgba(24, 216, 255, 0.12);
+}
+
+.explore-action:hover {
+  background: rgba(24, 216, 255, 0.16);
+  box-shadow: 0 0 32px rgba(24, 216, 255, 0.32);
+}
+
+.contact-dock {
+  align-items: center;
+  margin-top: 28px;
+  max-width: 360px;
+}
+
+.contact-chip {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(21, 42, 70, 0.82), rgba(44, 33, 78, 0.72));
+  border: 1px solid rgba(24, 216, 255, 0.28);
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.035), 0 18px 40px rgba(0, 0, 0, 0.22);
+  display: inline-flex;
+  height: 62px;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  width: 62px;
+}
+
+.contact-chip:hover,
+.contact-chip:focus-visible {
+  border-color: rgba(24, 216, 255, 0.78);
+  box-shadow: 0 0 30px rgba(24, 216, 255, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.contact-chip svg {
+  border-radius: 50%;
+  flex: 0 0 auto;
+  height: 50px;
+  padding: 12px;
+  width: 50px;
+}
+
+.contact-phone svg {
+  background: rgba(255, 113, 93, 0.18);
+  color: #ff9b8e;
+}
+
+.contact-email svg {
+  background: rgba(157, 92, 255, 0.18);
+  color: #b993ff;
+}
+
+.contact-wechat svg {
+  background: rgba(42, 234, 188, 0.16);
+  color: #48f0ca;
+}
+
+.contact-popover {
+  background: linear-gradient(135deg, rgba(14, 31, 55, 0.96), rgba(48, 34, 80, 0.94));
+  border: 1px solid rgba(24, 216, 255, 0.42);
+  border-radius: 16px;
+  bottom: calc(100% + 16px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34), 0 0 26px rgba(24, 216, 255, 0.16);
+  color: var(--text);
+  font-size: 14px;
+  left: 50%;
+  line-height: 1.5;
+  min-width: 210px;
+  opacity: 0;
+  padding: 14px 16px;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  transform: translate(-50%, 10px) scale(0.96);
+  transition: opacity 180ms ease, transform 180ms ease;
+  visibility: hidden;
+  z-index: 20;
+}
+
+.contact-popover::after {
+  background: inherit;
+  border-bottom: 1px solid rgba(24, 216, 255, 0.42);
+  border-right: 1px solid rgba(24, 216, 255, 0.42);
+  bottom: -6px;
+  content: "";
+  height: 12px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+}
+
+.contact-chip:hover .contact-popover,
+.contact-chip:focus-visible .contact-popover,
+.contact-chip:focus-within .contact-popover {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+  visibility: visible;
+}
+
+.contact-chip strong {
+  color: var(--cyan);
+  display: block;
+  font: 500 11px/1.3 var(--mono);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.floating-tags {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.tag {
+  align-items: center;
+  animation: floatTag 5s ease-in-out infinite;
+  background: rgba(8, 22, 40, 0.74);
+  border: 1px solid rgba(24, 216, 255, 0.34);
+  border-radius: 999px;
+  box-shadow: 0 0 26px rgba(24, 216, 255, 0.16);
+  color: var(--cyan);
+  display: inline-flex;
+  font-weight: 800;
+  min-height: 42px;
+  padding: 0 18px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.tag-one {
+  left: 12%;
+  top: -42px;
+}
+
+.tag-two {
+  right: 3%;
+  top: 18px;
+  color: #caa9ff;
+  animation-delay: -1.2s;
+}
+
+.tag-three {
+  right: 0;
+  top: 190px;
+  animation-delay: -2.1s;
+}
+
+.tag-four {
+  right: 18%;
+  top: 300px;
+  border-color: rgba(255, 113, 93, 0.42);
+  color: #ff9b8e;
+  animation-delay: -3s;
+}
+
+.tag-five {
+  left: 45%;
+  top: 352px;
+  color: #48f0ca;
+  animation-delay: -0.6s;
+}
+
+.quick-facts {
+  color: var(--muted);
+  font: 500 13px/1.4 var(--mono);
+  margin-top: 46px;
+}
+
+.quick-facts span {
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  padding-right: 18px;
+}
+
+.quick-facts span:last-child {
+  border-right: 0;
+}
+
+.portrait-panel {
+  min-height: min(720px, calc(100vh - 172px));
+  overflow: hidden;
+  position: relative;
+}
+
+.portrait-panel::after {
+  background: linear-gradient(180deg, transparent 55%, rgba(7, 11, 22, 0.9));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.portrait-panel img {
+  height: 100%;
+  min-height: min(720px, calc(100vh - 172px));
+  object-fit: contain;
+  object-position: 50% 50%;
+  width: 100%;
+}
+
+.portrait-caption {
+  bottom: 30px;
+  color: var(--cyan);
+  font: 500 12px/1.5 var(--mono);
+  left: 30px;
+  letter-spacing: 0;
+  position: absolute;
+  right: 30px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.section-intro {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr minmax(260px, 520px);
+  margin: 30px 0 64px;
+}
+
+.section-intro .section-kicker,
+.section-intro h2 {
+  grid-column: 1 / 2;
+}
+
+.section-intro h2 {
+  font-size: clamp(44px, 6vw, 88px);
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.section-intro p:not(.section-kicker) {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 980px;
+  text-align: center;
+}
+
+.centered h2 {
+  margin-top: 18px;
+}
+
+.centered p:not(.section-kicker) {
+  margin: 20px auto 0;
+  max-width: 760px;
+}
+
+.split-timeline {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 26px 0;
+  position: relative;
+}
+
+.timeline-bg-word {
+  color: rgba(157, 92, 255, 0.18);
+  font-size: clamp(86px, 15vw, 250px);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 0.82;
+  pointer-events: none;
+  position: absolute;
+  text-transform: uppercase;
+  user-select: none;
+  writing-mode: vertical-rl;
+  z-index: 0;
+}
+
+.timeline-bg-education {
+  left: -54px;
+  top: 20px;
+}
+
+.timeline-bg-working {
+  color: rgba(24, 216, 255, 0.11);
+  right: -48px;
+  top: 110px;
+}
+
+.split-timeline::before {
+  background: linear-gradient(180deg, var(--cyan), var(--violet), var(--cyan));
+  box-shadow: 0 0 28px rgba(24, 216, 255, 0.72);
+  content: "";
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 3px;
+}
+
+.moment {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 78px 1fr;
+  margin: 0 0 34px;
+  position: relative;
+}
+
+.moment-left .moment-card {
+  grid-column: 1 / 2;
+}
+
+.moment-left .node {
+  grid-column: 2 / 3;
+}
+
+.moment-right .node {
+  grid-column: 2 / 3;
+}
+
+.moment-right .moment-card {
+  grid-column: 3 / 4;
+}
+
+.node {
+  align-items: center;
+  background: rgba(246, 250, 255, 0.96);
+  border-radius: 50%;
+  border: 3px solid #f7fbff;
+  box-shadow: 0 0 30px rgba(24, 216, 255, 0.78), inset 0 0 16px rgba(255, 255, 255, 0.24);
+  color: #fff;
+  display: inline-flex;
+  font: 800 14px/1 var(--font);
+  height: 58px;
+  justify-content: center;
+  justify-self: center;
+  overflow: hidden;
+  position: relative;
+  width: 58px;
+  z-index: 2;
+}
+
+.node > span,
+.node img {
+  align-items: center;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.node .logo-mask {
+  background: rgba(246, 250, 255, 0.98);
+  overflow: hidden;
+}
+
+.node img {
+  border-radius: 50%;
+  display: block;
+  height: calc(100% - 10px);
+  object-fit: contain;
+  object-position: 50% 50%;
+  padding: 0;
+  width: calc(100% - 10px);
+}
+
+.node::before,
+.node::after {
+  background: linear-gradient(90deg, transparent, var(--cyan), var(--violet), transparent);
+  content: "";
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  z-index: -1;
+}
+
+.node::before {
+  right: 100%;
+}
+
+.node::after {
+  left: 100%;
+}
+
+.node-tesla img {
+  filter: saturate(1.1);
+  object-fit: contain;
+  padding: 2px;
+}
+
+.node-hku img,
+.node-lu img,
+.node-research-lu img,
+.node-ccb img,
+.node-orient img {
+  height: 100%;
+  width: 100%;
+}
+
+.moment-card,
+.library-card {
+  background: linear-gradient(135deg, rgba(27, 45, 70, 0.78), rgba(39, 31, 65, 0.66));
+  border: 1px solid rgba(24, 216, 255, 0.28);
+  border-radius: 18px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.035), 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.moment-card {
+  padding: clamp(22px, 3vw, 32px);
+}
+
+.moment-card h3,
+.library-card h3 {
+  font-size: clamp(22px, 2.2vw, 34px);
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin: 12px 0 8px;
+}
+
+.moment-card p,
+.library-card p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.moment-card ul {
+  color: var(--muted);
+  display: grid;
+  gap: 9px;
+  line-height: 1.55;
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.ai-view {
+  padding-bottom: 110px;
+}
+
+.library-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.library-card {
+  min-height: 330px;
+  padding: 28px;
+}
+
+.card-icon {
+  align-items: center;
+  background: rgba(24, 216, 255, 0.16);
+  border-radius: 14px;
+  color: var(--cyan);
+  display: inline-flex;
+  font: 800 18px/1 var(--mono);
+  height: 52px;
+  justify-content: center;
+  width: 52px;
+}
+
+.meter {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  height: 6px;
+  margin-top: 34px;
+  overflow: hidden;
+}
+
+.meter span {
+  background: linear-gradient(90deg, var(--cyan), var(--violet), var(--coral));
+  display: block;
+  height: 100%;
+}
+
+@keyframes typePop {
+  0% {
+    filter: blur(8px);
+    opacity: 0;
+    transform: translateY(30px) scale(0.92);
+  }
+
+  70% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes floatTag {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translate3d(10px, -12px, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes meteorFade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-18deg) scaleX(0.5);
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(-36px, 18px, 0) rotate(-18deg) scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .topbar {
+    grid-template-columns: 58px 1fr 86px;
+    height: 78px;
+    padding: 0 18px;
+  }
+
+  .logo {
+    border-radius: 14px;
+    height: 42px;
+    width: 42px;
+  }
+
+  .tabs {
+    gap: 6px;
+  }
+
+  .tab {
+    border-radius: 15px;
+    font-size: 0;
+    min-height: 48px;
+    padding: 0 14px;
+  }
+
+  .tab::after {
+    left: 18px;
+    right: 18px;
+  }
+
+  .lang-toggle {
+    min-width: 74px;
+  }
+
+  .view {
+    min-height: calc(100vh - 78px);
+    padding: 28px 18px;
+  }
+
+  .intro-view.is-active {
+    display: block;
+  }
+
+  .portrait-panel {
+    border-left: 0;
+    margin-top: 42px;
+    min-height: 480px;
+  }
+
+  .portrait-panel img {
+    min-height: 480px;
+    object-position: 50% 50%;
+  }
+
+  .quick-facts span {
+    border-right: 0;
+  }
+
+  .typing-name .word {
+    max-width: none;
+  }
+
+  .contact-dock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 250px;
+  }
+
+  .contact-chip {
+    height: 58px;
+    min-height: 0;
+    width: 58px;
+  }
+
+  .contact-chip svg {
+    height: 46px;
+    width: 46px;
+  }
+
+  .contact-popover {
+    left: 0;
+    min-width: min(250px, calc(100vw - 42px));
+    transform: translateY(10px) scale(0.96);
+  }
+
+  .contact-popover::after {
+    left: 28px;
+  }
+
+  .contact-chip:hover .contact-popover,
+  .contact-chip:focus-visible .contact-popover,
+  .contact-chip:focus-within .contact-popover {
+    transform: translateY(0) scale(1);
+  }
+
+  .floating-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0 0;
+    position: static;
+  }
+
+  .tag {
+    min-height: 34px;
+    padding: 0 12px;
+    position: static;
+  }
+
+  .section-intro {
+    display: block;
+  }
+
+  .section-intro p:not(.section-kicker) {
+    margin-top: 18px;
+  }
+
+  .split-timeline::before {
+    left: 29px;
+  }
+
+  .timeline-bg-word {
+    font-size: clamp(74px, 22vw, 140px);
+    opacity: 0.75;
+  }
+
+  .timeline-bg-education {
+    left: -30px;
+    top: 46px;
+  }
+
+  .timeline-bg-working {
+    right: -28px;
+    top: 520px;
+  }
+
+  .moment {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .moment-left .node,
+  .moment-right .node {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .moment-left .moment-card,
+  .moment-right .moment-card {
+    grid-column: 2 / 3;
+  }
+
+  .node {
+    height: 46px;
+    width: 46px;
+    font-size: 12px;
+  }
+
+  .library-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="meteor-layer" aria-hidden="true"></div>
+    <div class="site-shell">
+      <header class="topbar" aria-label="Primary navigation">
+        <a class="logo" href="#intro" aria-label="Chenxi Huang home">CH</a>
+
+        <nav class="tabs" aria-label="Portfolio sections">
+          <button class="tab is-active" type="button" data-view="intro">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4v-9.5Z" />
+            </svg>
+            <span data-i18n="navIntro">Intro</span>
+          </button>
+          <button class="tab" type="button" data-view="timeline">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m8 5-5 7 5 7M16 5l5 7-5 7" />
+            </svg>
+            <span data-i18n="navTimeline">Timeline</span>
+          </button>
+          <button class="tab" type="button" data-view="ai">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0 0 6v1a3 3 0 0 0 5 2.2M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 0 6v1a3 3 0 0 1-5 2.2M12 5v14" />
+            </svg>
+            <span data-i18n="navAi">AI Library</span>
+          </button>
+        </nav>
+
+        <button class="lang-toggle" type="button" aria-label="Switch language">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM3.6 9h16.8M3.6 15h16.8M12 3c2.2 2.5 3.2 5.5 3.2 9S14.2 18.5 12 21M12 3c-2.2 2.5-3.2 5.5-3.2 9s1 6.5 3.2 9" />
+          </svg>
+          <span data-i18n="langLabel">EN</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="view intro-view is-active" id="intro" data-view-panel="intro" aria-labelledby="intro-title">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="heroPill">Business Operations · Marketing · Research</p>
+            <h1 id="intro-title" class="typing-name" aria-label="Chenxi Huang">
+              <span class="word" aria-hidden="true" data-word="Chenxi"></span>
+              <span class="word gradient-word" aria-hidden="true" data-word="Huang"></span>
+            </h1>
+            <p class="hero-line" data-i18n="heroLine">I turn business details into organized action.</p>
+            <p class="hero-body" data-i18n="heroBody">
+              A business graduate moving across operations, finance, investment research, and marketing. I like systems that are clear, teams that move with evidence, and work that becomes easier because someone cared about the details.
+            </p>
+
+            <div class="contact-grid contact-dock" aria-label="Contact information">
+              <a class="contact-chip contact-phone" href="tel:+8615062668194">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.6 4.5 9 3.6l2.2 4.7-1.4 1c.9 1.9 2.1 3.1 4 4l1-1.4 4.7 2.2-.9 2.4c-.4 1.1-1.5 1.8-2.7 1.6-5.7-.8-10.2-5.3-11-11-.2-1.2.5-2.3 1.7-2.6Z" />
+                </svg>
+                <span class="contact-popover">
+                  <strong data-i18n="contactPhone">Phone</strong>
+                  +86 15062668194<br />
+                  +852 46727327
+                </span>
+              </a>
+              <a class="contact-chip contact-email" href="mailto:huangchenxi202409@163.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 6h16v12H4V6Zm1.5 1.5L12 13l6.5-5.5" />
+                </svg>
+                <span class="contact-popover">
+                  <strong data-i18n="contactEmail">Email</strong>
+                  huangchenxi202409@163.com
+                </span>
+              </a>
+              <div class="contact-chip contact-wechat" role="text" tabindex="0">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.4 16.4c-3.4-.2-6-2.3-6-5 0-2.9 3.1-5.2 6.8-5.2 3.3 0 6.1 1.8 6.7 4.2M8 9.3h.1M12.4 9.3h.1M13.8 12.2c3.8 0 6.8 2.2 6.8 4.9 0 1.5-.9 2.8-2.4 3.7l.5 1.8-2.2-1.1c-.8.2-1.7.4-2.7.4-3.8 0-6.8-2.2-6.8-4.8s3-4.9 6.8-4.9ZM12 15.8h.1M16.4 15.8h.1" />
+                </svg>
+                <span class="contact-popover">
+                  <strong data-i18n="contactWechat">WeChat</strong>
+                  Horange03915
+                </span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="ghost-action explore-action" type="button" data-view="timeline">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 5v14M6 13l6 6 6-6" />
+                </svg>
+                <span data-i18n="explore">Explore journey</span>
+              </button>
+            </div>
+
+            <div class="floating-tags" aria-label="Personal keywords">
+              <span class="tag tag-one" data-i18n="tagDetail">Detail-minded</span>
+              <span class="tag tag-two" data-i18n="tagAi">AI Learner</span>
+              <span class="tag tag-three" data-i18n="tagResilient">Resilient</span>
+              <span class="tag tag-four" data-i18n="tagPersistent">Persistent</span>
+              <span class="tag tag-five">ENFJ</span>
+            </div>
+
+            <div class="quick-facts" aria-label="Highlights">
+              <span data-i18n="factOne">HKU MSc Marketing</span>
+              <span data-i18n="factTwo">Tesla Business Operations</span>
+              <span data-i18n="factThree">GPA 3.88 / First Class</span>
+            </div>
+          </div>
+
+          <div class="portrait-panel">
+            <img src="https://huang-chenxi-portfolio.netlify.app/public/huang-chenxi-4x5.jpg" alt="Chenxi Huang portrait" />
+            <div class="portrait-caption">
+              <span data-i18n="portraitCaption">Detail-minded. People-aware. Execution-driven.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="view timeline-view" id="timeline" data-view-panel="timeline" aria-labelledby="timeline-title">
+          <div class="section-intro">
+            <p class="section-kicker" data-i18n="timelineKicker">Education on the left · Experience on the right</p>
+            <h2 id="timeline-title" data-i18n="timelineTitle">A timeline of learning and doing.</h2>
+            <p data-i18n="timelineBody">
+              My path is built from two lines at once: academic training that shapes how I think, and internships that test how I execute.
+            </p>
+          </div>
+
+          <div class="split-timeline" aria-label="Education and experience timeline">
+            <span class="timeline-bg-word timeline-bg-education" aria-hidden="true">EDUCATION</span>
+            <span class="timeline-bg-word timeline-bg-working" aria-hidden="true">WORKING</span>
+            <article class="moment moment-left">
+              <div class="moment-card">
+                <span class="moment-date">2026.08 - 2027.09</span>
+                <h3 data-i18n="hkuTitle">University of Hong Kong</h3>
+                <p data-i18n="hkuDesc">MSc in Marketing</p>
+              </div>
+              <span class="node node-hku"><span class="logo-mask"><img src="https://huang-chenxi-portfolio.netlify.app/public/logos/hku-icon.svg" alt="University of Hong Kong logo" /></span></span>
+            </article>
+
+            <article class="moment moment-right">
+              <span class="node node-tesla"><span class="logo-mask"><img src="https://huang-chenxi-portfolio.netlify.app/public/logos/tesla.svg" alt="Tesla logo" /></span></span>
+              <div class="moment-card">
+                <span class="moment-date">2026.05 - Present</span>
+                <h3 data-i18n="teslaTitle">Tesla</h3>
+                <p data-i18n="teslaRole">Business Operations Intern</p>
+                <ul>
+                  <li data-i18n="teslaOne">Created 100+ supplier master records and supported VC approval with legal and finance teams.</li>
+                  <li data-i18n="teslaTwo">Maintained customer-facing store information systems and improved the intern operations SOP.</li>
+                  <li data-i18n="teslaThree">Managed daily contract verification, stamping, archiving, and system entry for stores and charging business.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="moment moment-left">
+              <div class="moment-card">
+                <span class="moment-date">2022.09 - 2026.07</span>
+                <h3 data-i18n="lnTitle">Lingnan University</h3>
+                <p data-i18n="lnDesc">BBA, GPA 3.88/4.0, First Class Honours</p>
+                <ul>
+                  <li data-i18n="lnOne">Scholarships from APEC, HKSAR Government, AR Charitable Foundation, and HKCGI Foundation.</li>
+                  <li data-i18n="lnTwo">Student representative for business programme, operational risk management, and student-staff consultation.</li>
+                </ul>
+              </div>
+              <span class="node node-lu"><span class="logo-mask"><img src="https://huang-chenxi-portfolio.netlify.app/public/logos/lingnan-icon.svg" alt="Lingnan University logo" /></span></span>
+            </article>
+
+            <article class="moment moment-right">
+              <span class="node node-ccb"><span class="logo-mask"><img src="https://huang-chenxi-portfolio.netlify.app/public/logos/ccb-icon.svg" alt="China Construction Bank logo" /></span></span>
+              <div class="moment-card">
+                <span class="moment-date">2025.07 - 2025.08</span>
+                <h3 data-i18n="ccbTitle">China Construction Bank, Suzhou Branch</h3>
+                <p data-i18n="ccbRole">Financial Services Intern</p>
+                <ul>
+                  <li data-i18n="ccbOne">Assisted retail services and corporate account opening operations to improve service efficiency.</li>
+                  <li data-i18n="ccbTwo">Supported a summer wealth planning workshop for SME owners and customer segmentation follow-up.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="moment moment-left">
+              <div class="moment-card">
+                <span class="moment-date">2025.02 - 2025.08</span>
+                <h3 data-i18n="researchTitle">Academic Research</h3>
+                <p data-i18n="researchRole">Research Intern in Consumer Behavior</p>
+                <ul>
+                  <li data-i18n="researchOne">Supported survey design, sample analysis, and literature comparison for consumer decision-making research.</li>
+                  <li data-i18n="researchTwo">Helped design questionnaires on factors influencing male consumer behavior.</li>
+                </ul>
+              </div>
+              <span class="node node-research-lu"><span class="logo-mask"><img src="https://huang-chenxi-portfolio.netlify.app/public/logos/lingnan-icon.svg" alt="Lingnan University logo" /></span></span>
+            </article>
+
+            <article class="moment moment-right">
+              <span class="node node-orient"><span class="logo-mask"><img src="https://huang-chenxi-portfolio.netlify.app/public/logos/orient-icon.svg" alt="Orient Securities logo" /></span></span>
+              <div class="moment-card">
+                <span class="moment-date">2025.05 - 2025.07</span>
+                <h3 data-i18n="orientTitle">Orient Securities Headquarters</h3>
+                <p data-i18n="orientRole">Investment Project Team Intern</p>
+                <ul>
+                  <li data-i18n="orientOne">Updated fund investment ledgers covering 7 portfolio companies and supported post-investment reporting.</li>
+                  <li data-i18n="orientTwo">Joined three on-site due diligence visits for two private fund targets and condensed 50+ pages into 3-page investment notes.</li>
+                  <li data-i18n="orientThree">Studied IPO practice, STAR Market policies, tax issues, legal topics, and capital-market valuation.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view ai-view" id="ai" data-view-panel="ai" aria-labelledby="ai-title">
+          <div class="section-intro centered">
+            <p class="section-kicker" data-i18n="aiKicker">AI Learning Library</p>
+            <h2 id="ai-title" data-i18n="aiTitle">How I am learning to work with AI.</h2>
+            <p data-i18n="aiBody">
+              A small library of practical AI learning areas I am building for business research, operations, communication, and personal productivity.
+            </p>
+          </div>
+
+          <div class="library-grid">
+            <article class="library-card">
+              <span class="card-icon">01</span>
+              <h3 data-i18n="aiOneTitle">AI for career competitiveness</h3>
+              <p data-i18n="aiOneBody">Certificate-backed learning on how AI changes workplace skills, decision speed, and personal productivity.</p>
+              <div class="meter"><span style="width: 86%"></span></div>
+            </article>
+            <article class="library-card">
+              <span class="card-icon">02</span>
+              <h3 data-i18n="aiTwoTitle">Data-aware business research</h3>
+              <p data-i18n="aiTwoBody">Combining SPSS, Bloomberg, market materials, and AI-assisted reading to structure messy information faster.</p>
+              <div class="meter"><span style="width: 82%"></span></div>
+            </article>
+            <article class="library-card">
+              <span class="card-icon">03</span>
+              <h3 data-i18n="aiThreeTitle">AI-supported operations</h3>
+              <p data-i18n="aiThreeBody">Using AI thinking to write cleaner SOPs, summarize cross-team issues, and turn repetitive workflows into checkable systems.</p>
+              <div class="meter"><span style="width: 78%"></span></div>
+            </article>
+            <article class="library-card">
+              <span class="card-icon">04</span>
+              <h3 data-i18n="aiFourTitle">Visual communication</h3>
+              <p data-i18n="aiFourBody">Applying Canva, video editing, and AI-assisted storytelling to make business ideas easier to understand.</p>
+              <div class="meter"><span style="width: 80%"></span></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+const translations = {
+  en: {
+    navIntro: "Intro",
+    navTimeline: "Timeline",
+    navAi: "AI Library",
+    langLabel: "EN",
+    heroPill: "Business Operations · Marketing · Research",
+    heroLine: "I turn business details into organized action.",
+    heroBody:
+      "Detail-driven and people-oriented. I connect business context, AI learning, and persistent execution to make complex work clearer and easier to move forward.",
+    contactPhone: "Phone",
+    contactEmail: "Email",
+    contactWechat: "WeChat",
+    explore: "Explore journey",
+    factOne: "HKU MSc Marketing",
+    factTwo: "Tesla Business Operations",
+    factThree: "GPA 3.88 / First Class",
+    tagDetail: "Detail-minded",
+    tagAi: "AI Learner",
+    tagResilient: "Resilient",
+    tagPersistent: "Persistent",
+    portraitCaption: "Detail-minded. People-aware. Execution-driven.",
+    timelineKicker: "Education on the left · Experience on the right",
+    timelineTitle: "A timeline of learning and doing.",
+    timelineBody:
+      "My path is built from two lines at once: academic training that shapes how I think, and internships that test how I execute.",
+    hkuTitle: "University of Hong Kong",
+    hkuDesc: "MSc in Marketing",
+    teslaTitle: "Tesla",
+    teslaRole: "Business Operations Intern",
+    teslaOne:
+      "Created 100+ supplier master records and supported VC approval with legal and finance teams.",
+    teslaTwo:
+      "Maintained customer-facing store information systems and improved the intern operations SOP.",
+    teslaThree:
+      "Managed daily contract verification, stamping, archiving, and system entry for stores and charging business.",
+    lnTitle: "Lingnan University",
+    lnDesc: "BBA, GPA 3.88/4.0, First Class Honours",
+    lnOne:
+      "Scholarships from APEC, HKSAR Government, AR Charitable Foundation, and HKCGI Foundation.",
+    lnTwo:
+      "Student representative for business programme, operational risk management, and student-staff consultation.",
+    ccbTitle: "China Construction Bank, Suzhou Branch",
+    ccbRole: "Financial Services Intern",
+    ccbOne:
+      "Assisted retail services and corporate account opening operations to improve service efficiency.",
+    ccbTwo:
+      "Supported a summer wealth planning workshop for SME owners and customer segmentation follow-up.",
+    researchTitle: "Academic Research",
+    researchRole: "Research Intern in Consumer Behavior",
+    researchOne:
+      "Supported survey design, sample analysis, and literature comparison for consumer decision-making research.",
+    researchTwo:
+      "Helped design questionnaires on factors influencing male consumer behavior.",
+    orientTitle: "Orient Securities Headquarters",
+    orientRole: "Investment Project Team Intern",
+    orientOne:
+      "Updated fund investment ledgers covering 7 portfolio companies and supported post-investment reporting.",
+    orientTwo:
+      "Joined three on-site due diligence visits for two private fund targets and condensed 50+ pages into 3-page investment notes.",
+    orientThree:
+      "Studied IPO practice, STAR Market policies, tax issues, legal topics, and capital-market valuation.",
+    aiKicker: "AI Learning Library",
+    aiTitle: "How I am learning to work with AI.",
+    aiBody:
+      "A small library of practical AI learning areas I am building for business research, operations, communication, and personal productivity.",
+    aiOneTitle: "AI for career competitiveness",
+    aiOneBody:
+      "Certificate-backed learning on how AI changes workplace skills, decision speed, and personal productivity.",
+    aiTwoTitle: "Data-aware business research",
+    aiTwoBody:
+      "Combining SPSS, Bloomberg, market materials, and AI-assisted reading to structure messy information faster.",
+    aiThreeTitle: "AI-supported operations",
+    aiThreeBody:
+      "Using AI thinking to write cleaner SOPs, summarize cross-team issues, and turn repetitive workflows into checkable systems.",
+    aiFourTitle: "Visual communication",
+    aiFourBody:
+      "Applying Canva, video editing, and AI-assisted storytelling to make business ideas easier to understand.",
+  },
+  zh: {
+    navIntro: "简介",
+    navTimeline: "时间轴",
+    navAi: "AI 学习库",
+    langLabel: "中",
+    heroPill: "商务运营 · 市场营销 · 研究分析",
+    heroLine: "我把业务细节整理成可推进的行动。",
+    heroBody:
+      "注重细节，也关注人的感受。我希望把商业理解、AI 学习和持续执行力结合起来，让复杂的事情更清晰、更容易推进。",
+    contactPhone: "电话",
+    contactEmail: "邮箱",
+    contactWechat: "微信",
+    explore: "查看时间轴",
+    factOne: "香港大学 市场营销硕士",
+    factTwo: "Tesla 商务运营实习",
+    factThree: "GPA 3.88 / 一等荣誉",
+    tagDetail: "注重细节",
+    tagAi: "AI 学习者",
+    tagResilient: "有韧性",
+    tagPersistent: "坚持",
+    portraitCaption: "关注细节。理解人。推进结果。",
+    timelineKicker: "左侧教育与研究 · 右侧实习经历",
+    timelineTitle: "学习与实践并行的时间轴。",
+    timelineBody:
+      "我的成长由两条线组成：一条是训练思考方式的学术经历，另一条是在真实业务中检验执行力的实习经历。",
+    hkuTitle: "香港大学",
+    hkuDesc: "市场营销硕士",
+    teslaTitle: "特斯拉",
+    teslaRole: "商务运营实习生",
+    teslaOne: "创建 100+ 供应商主数据，并协同法务、财务推进 VC 审批流程。",
+    teslaTwo: "维护面向消费者的门店线上信息系统，并完善实习生运营板块 SOP。",
+    teslaThree: "统筹门店及充电业务合同核验、盖章、归档与系统录入。",
+    lnTitle: "香港岭南大学",
+    lnDesc: "工商管理本科，GPA 3.88/4.0，一等荣誉学位",
+    lnOne: "获得 APEC、香港特别行政区政府、AR 基金会、HKCGI 基金会等奖学金。",
+    lnTwo: "担任商科课程、运营风险管理及师生咨询相关学生代表。",
+    ccbTitle: "中国建设银行苏州分行",
+    ccbRole: "金融服务实习生",
+    ccbOne: "协助个人业务与公司开户基础操作，提升客户体验与团队服务效率。",
+    ccbTwo: "参与中小企业主夏季财富规划工作坊及客户分类跟进。",
+    researchTitle: "学术研究",
+    researchRole: "消费者行为研究实习生",
+    researchOne: "参与消费决策研究的问卷设计、样本分析与文献对照。",
+    researchTwo: "协助设计男性消费行为影响因素相关调研问卷。",
+    orientTitle: "上海东方证券总部",
+    orientRole: "投资项目组实习生",
+    orientOne: "整理更新 7 家投后企业基金投资项目台账并支持投后报告。",
+    orientTwo: "参与 2 家私募基金标的 3 次现场尽调，将 50+ 页纪要提炼为 3 页投资文档。",
+    orientThree: "学习 IPO、科创板政策、税务、法律及资本市场估值相关内容。",
+    aiKicker: "AI 学习库",
+    aiTitle: "我如何学习与 AI 协作。",
+    aiBody:
+      "这是一个面向商业研究、运营协作、沟通表达与个人效率的 AI 学习版块，会随着我的学习继续补充。",
+    aiOneTitle: "AI 与职业竞争力",
+    aiOneBody: "围绕 AI 如何改变职场技能、决策速度与个人效率进行证书化学习。",
+    aiTwoTitle: "数据意识与商业研究",
+    aiTwoBody: "结合 SPSS、Bloomberg、市场资料与 AI 辅助阅读，更快整理复杂信息。",
+    aiThreeTitle: "AI 支持运营协作",
+    aiThreeBody: "用 AI 思维写出更清晰的 SOP、总结跨团队问题，并把重复流程变成可检查系统。",
+    aiFourTitle: "视觉化沟通",
+    aiFourBody: "结合 Canva、剪映与 AI 辅助叙事，让商业想法更容易被理解。",
+  },
+};
+
+let currentLanguage = "en";
+
+const buildTypingName = () => {
+  document.querySelectorAll(".typing-name .word").forEach((word) => {
+    const text = word.dataset.word || "";
+    word.textContent = "";
+
+    [...text].forEach((char, index) => {
+      const letter = document.createElement("span");
+      letter.className = "letter";
+      letter.textContent = char;
+      letter.style.animationDelay = `${index * 70 + (word.classList.contains("gradient-word") ? 420 : 0)}ms`;
+      word.appendChild(letter);
+    });
+  });
+};
+
+const setActiveView = (view) => {
+  document.querySelectorAll("[data-view-panel]").forEach((panel) => {
+    panel.classList.toggle("is-active", panel.dataset.viewPanel === view);
+  });
+
+  document.querySelectorAll("[data-view]").forEach((control) => {
+    control.classList.toggle("is-active", control.dataset.view === view);
+  });
+};
+
+const applyLanguage = (language) => {
+  currentLanguage = language;
+  document.documentElement.lang = language === "en" ? "en" : "zh-CN";
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    element.textContent = translations[language][key];
+  });
+};
+
+document.querySelectorAll("[data-view]").forEach((control) => {
+  control.addEventListener("click", () => setActiveView(control.dataset.view));
+});
+
+document.querySelector(".lang-toggle").addEventListener("click", () => {
+  applyLanguage(currentLanguage === "en" ? "zh" : "en");
+});
+
+const cursorGlow = document.querySelector(".cursor-glow");
+const meteorLayer = document.querySelector(".meteor-layer");
+let meteorFrame = 0;
+
+window.addEventListener("pointermove", (event) => {
+  cursorGlow.style.opacity = "1";
+  cursorGlow.style.left = `${event.clientX}px`;
+  cursorGlow.style.top = `${event.clientY}px`;
+
+  meteorFrame += 1;
+  if (meteorFrame % 5 !== 0) return;
+
+  const meteor = document.createElement("span");
+  meteor.className = "meteor";
+  meteor.style.left = `${event.clientX - 34}px`;
+  meteor.style.top = `${event.clientY - 4}px`;
+  meteor.style.animation = "meteorFade 620ms ease-out forwards";
+  meteorLayer.appendChild(meteor);
+  meteor.addEventListener("animationend", () => meteor.remove(), { once: true });
+});
+
+window.addEventListener("pointerleave", () => {
+  cursorGlow.style.opacity = "0";
+});
+
+buildTypingName();
+applyLanguage(currentLanguage);
+
+</script>
+  </body>
+</html>
