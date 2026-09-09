@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="HKU icon">
+  <rect width="120" height="120" rx="60" fill="#fff"/>
+  <path d="M26 15h68v30c0 28-15 49-34 60C41 94 26 73 26 45V15Z" fill="#f7fbff" stroke="#1b4f91" stroke-width="3"/>
+  <path d="M30 19h60v22H30z" fill="#d92922"/>
+  <path d="M30 41h30v49c-18-10-30-27-30-49Z" fill="#2fa46f"/>
+  <path d="M60 41h30c0 22-12 39-30 49V41Z" fill="#1488c9"/>
+  <path d="M39 56c6-5 15-5 21 0 6-5 15-5 21 0v25c-6-4-15-4-21 1-6-5-15-5-21-1V56Z" fill="#fff7cf" stroke="#1b4f91" stroke-width="2"/>
+  <path d="M60 55v27M44 64h11M65 64h11M44 73h11M65 73h11" stroke="#1b4f91" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 27c8-6 13 5 20-1 5-4 10-3 15 2 6 5 10-5 16 1" fill="none" stroke="#ffd461" stroke-width="4" stroke-linecap="round"/>
+</svg>
