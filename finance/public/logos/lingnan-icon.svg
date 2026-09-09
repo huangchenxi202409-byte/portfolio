@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lingnan University icon">
+  <rect width="120" height="120" rx="60" fill="#fff"/>
+  <circle cx="60" cy="60" r="39" fill="none" stroke="#ef2b2d" stroke-width="9"/>
+  <path d="M26 58h68" stroke="#ef2b2d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M38 49c11-12 33-12 44 0" fill="none" stroke="#ef2b2d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M42 72c6 8 30 8 36 0" fill="none" stroke="#ef2b2d" stroke-width="9" stroke-linecap="round"/>
+</svg>
