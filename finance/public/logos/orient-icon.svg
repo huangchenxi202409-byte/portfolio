@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Orient Securities icon">
+  <rect width="120" height="120" rx="60" fill="#fff"/>
+  <g fill="#ef2b2d" transform="translate(60 60) rotate(45)">
+    <rect x="-37" y="-37" width="29" height="29" rx="4"/>
+    <rect x="8" y="-37" width="29" height="29" rx="4"/>
+    <rect x="-37" y="8" width="29" height="29" rx="4"/>
+    <rect x="8" y="8" width="29" height="29" rx="4"/>
+  </g>
+</svg>
