@@ -4,35 +4,45 @@ const translations = {
     navTimeline: "Timeline",
     navAi: "AI Library",
     langLabel: "EN",
-    heroPill: "Marketing Operations · Event Marketing · Channel & E-commerce · Brand Operations",
+    heroPill: "Business Development · Sales Operations · Client Service",
     heroLine: "Making the impossible possible.",
     heroBody:
-      "Experience supporting customer-facing store information, campus-event execution, and consumer-behavior research. I aim to bring a user perspective and careful execution to marketing ideas and make them actionable.",
+      "I bring business operations, client service, and cross-functional coordination experience to commercial teams. From supplier onboarding and contract workflows to customer-facing store information and bancassurance leads, I turn moving parts into clear follow-through and stronger client experiences.",
     contactPhone: "Phone",
     contactEmail: "Email",
     contactWechat: "WeChat",
     explore: "Explore journey",
     factOne: "HKU MSc Marketing",
-    factTwo: "Market Awareness · Execution",
+    factTwo: "Client Focus · Follow-through",
     factThree: "GPA 3.88 / First Class",
     tagDetail: "Detail-minded",
     tagAi: "AI Learner",
     tagResilient: "Resilient",
     tagPersistent: "Persistent",
     portraitCaption: "Detail-minded. People-aware. Execution-driven.",
-    timelineKicker: "Education on the left · Experience on the right",
-    timelineTitle: "A timeline of learning and doing.",
+    timelineKicker: "Education on the left · Commercial experience on the right",
+    timelineTitle: "A timeline of client, business, and operational experience.",
     timelineBody:
-      "My path is built from two lines at once: academic training that shapes how I think, and internships that test how I execute.",
+      "Across commercial operations, client service, research, and event execution, I have learned to communicate clearly, coordinate across teams, and carry details through to delivery.",
     tagEducation: "Education",
     tagOperations: "Operations",
     tagCampus: "Campus",
     tagResearch: "Research",
     tagInvestment: "Investment",
     tagEvent: "Event Marketing",
+    tagInsurance: "Reinsurance",
+    tagBanking: "Banking",
     courseLabel: "Selected Coursework",
     hkuTitle: "University of Hong Kong",
     hkuDesc: "MSc in Marketing",
+    taipingTitle: "Taiping Reinsurance",
+    taipingRole: "Underwriting Assistant Intern",
+    taipingOne:
+      "Analyzed cedant business context, historical renewal data, and current performance to support treaty-renewal assessments.",
+    taipingTwo:
+      "Compared treaty structure and renewal terms through GNPI, combined ratio, and ROI, supporting quotation, wording, and negotiation preparation.",
+    taipingThree:
+      "Handled broker renewal correspondence and PAP setup for new and renewal business; tracked regional risk and climate developments for underwriting reference.",
     teslaTitle: "Tesla",
     teslaRole: "Business Operations Intern",
     teslaOne:
@@ -66,6 +76,12 @@ const translations = {
       "Joined four due-diligence sessions for two portfolio targets; synthesized company and industry information across business model, market position, competition, operating performance, and risk.",
     orientTwo:
       "Condensed 50+ pages of meeting notes into a 10-page investment brief and maintained materials for 7 portfolio companies and 10+ post-investment and fund-operation reports.",
+    ccbTitle: "China Construction Bank",
+    ccbRole: "Service Intern",
+    ccbOne:
+      "Supported customer triage, business enquiries, document pre-review, identity verification, and account-opening basics while maintaining compliant service flow.",
+    ccbTwo:
+      "Identified potential bancassurance needs from asset allocation, maturing deposits, and retirement planning, then connected customers with the insurance team.",
     hkubspaTitle: "HKU Business School Postgraduate Students and Alumni Association",
     hkubspaRole: "Event Planning and Communications",
     hkubspaOne:
@@ -94,35 +110,42 @@ const translations = {
     navTimeline: "时间轴",
     navAi: "AI 学习库",
     langLabel: "中",
-    heroPill: "市场运营 · 活动营销 · 渠道与电商 · 品牌运营",
+    heroPill: "商务拓展 · 销售运营 · 客户服务",
     heroLine: "将不可能变为可能。",
     heroBody:
-      "曾参与门店线上信息维护、校园活动执行和消费者行为研究等工作。希望以用户视角和细致的执行力，把市场想法转化为可落地的行动。",
+      "我有商业运营、客户服务和跨部门协作的实践经验：从供应商准入与合同流程，到消费者端门店信息维护和银保客户线索识别，始终把复杂事项梳理清楚、推动落地，并为客户带来更顺畅的体验。",
     contactPhone: "电话",
     contactEmail: "邮箱",
     contactWechat: "微信",
     explore: "查看时间轴",
     factOne: "香港大学 市场营销硕士",
-    factTwo: "市场敏感度 · 执行力",
+    factTwo: "客户导向 · 推进落地",
     factThree: "GPA 3.88 / 一等荣誉",
     tagDetail: "注重细节",
     tagAi: "AI 学习者",
     tagResilient: "有韧性",
     tagPersistent: "坚持",
     portraitCaption: "关注细节。理解人。推进结果。",
-    timelineKicker: "左侧教育与研究 · 右侧实习经历",
-    timelineTitle: "学习与实践并行的时间轴。",
+    timelineKicker: "左侧教育与研究 · 右侧商业实践",
+    timelineTitle: "围绕客户、业务与运营展开的时间轴。",
     timelineBody:
-      "我的成长由两条线组成：一条是训练思考方式的学术经历，另一条是在真实业务中检验执行力的实习经历。",
+      "从商业运营、客户服务到研究与活动执行，我持续锻炼清晰沟通、跨团队协同和将细节推进至交付的能力。",
     tagEducation: "教育",
     tagOperations: "运营",
     tagCampus: "校内",
     tagResearch: "研究",
     tagInvestment: "投资",
     tagEvent: "活动营销",
+    tagInsurance: "再保险",
+    tagBanking: "银行",
     courseLabel: "代表课程",
     hkuTitle: "香港大学",
     hkuDesc: "市场营销硕士",
+    taipingTitle: "太平再保险有限公司",
+    taipingRole: "核保助理实习生",
+    taipingOne: "协助分析分出保险公司业务情况、历史续保数据与当期表现，为合约续保评估提供支持。",
+    taipingTwo: "结合 GNPI、综合成本率、ROI 与分保结构对比续保条件，为报价、条款调整及谈判准备提供数据支持。",
+    taipingThree: "对接经纪人续保邮件并完成新签、续转业务 PAP 开设；跟踪区域风险与气候变化，为核保判断提供参考。",
     teslaTitle: "特斯拉",
     teslaRole: "商务运营实习生",
     teslaOne: "围绕新店开业、闭店及门店服务调整，负责消费者端线上门店信息配置与校验，覆盖门店地址、营业状态、地理围栏及服务功能，保障线上展示信息与线下实际运营同步。",
@@ -145,6 +168,10 @@ const translations = {
     orientRole: "投资项目组实习生",
     orientOne: "参与东证跟踪的 2 家标的企业共 4 次尽职调查，收集并整理企业及行业资料，围绕商业模式、行业地位、竞争格局、经营表现及核心风险提炼关键信息。",
     orientTwo: "将 50+ 页尽调会议纪要整理为 10 页投资摘要，并维护 7 家投后企业台账及 10+ 份投后管理、基金运营报告，支持团队快速定位企业动态与后续跟进事项。",
+    ccbTitle: "中国建设银行",
+    ccbRole: "服务实习生",
+    ccbOne: "协助客户分流、业务咨询、材料预审、身份核验及开户基础流程，在合规要求下提升柜面服务衔接效率。",
+    ccbTwo: "结合资产配置、定期存款到期及养老保障等需求识别银保机会，并向保险团队转介潜在客户。",
     hkubspaTitle: "香港大学经管学院研究生暨校友会 HKUBSPA",
     hkubspaRole: "活动策划与传播执行",
     hkubspaOne: "面向近 200 名即将赴港的内地研究生，参与策划“薄扶林道物语”新生见面会；以“新手村”为主题概念，将“资源包、任务解锁、生活地图”等元素用于活动预热与传播表达。",
@@ -211,23 +238,27 @@ document.querySelector(".lang-toggle").addEventListener("click", () => {
 
 const cursorGlow = document.querySelector(".cursor-glow");
 const meteorLayer = document.querySelector(".meteor-layer");
-let meteorFrame = 0;
+let lastMeteorAt = 0;
+let lastMeteorPoint = { x: 0, y: 0 };
 
 window.addEventListener("pointermove", (event) => {
   cursorGlow.style.opacity = "1";
   cursorGlow.style.left = `${event.clientX}px`;
   cursorGlow.style.top = `${event.clientY}px`;
 
-  meteorFrame += 1;
-  if (meteorFrame % 5 !== 0) return;
+  const now = performance.now();
+  const distance = Math.hypot(event.clientX - lastMeteorPoint.x, event.clientY - lastMeteorPoint.y);
+  if (now - lastMeteorAt < 130 || distance < 42) return;
 
   const meteor = document.createElement("span");
   meteor.className = "meteor";
-  meteor.style.left = `${event.clientX - 34}px`;
-  meteor.style.top = `${event.clientY - 4}px`;
+  meteor.style.left = `${event.clientX - 2}px`;
+  meteor.style.top = `${event.clientY - 1}px`;
   meteor.style.animation = "meteorFade 620ms ease-out forwards";
   meteorLayer.appendChild(meteor);
   meteor.addEventListener("animationend", () => meteor.remove(), { once: true });
+  lastMeteorAt = now;
+  lastMeteorPoint = { x: event.clientX, y: event.clientY };
 });
 
 window.addEventListener("pointerleave", () => {
