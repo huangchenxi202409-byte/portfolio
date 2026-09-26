@@ -1,0 +1,12 @@
+[eval]:1
+const fs=require("fs"); let h=fs.readFileSync("index.html","utf8"); const articles=[...h.matchAll(/<article class="moment moment-right">[\s\S]*?<\\/article>/g)].map(m=>m[0]); const orient=articles.find(x=>x.includes("orientTitle")); const ccb=articles.find(x=>x.includes("ccbTitle")); h=h.replace(orient,""); h=h.replace(ccb, ccb+"\n\n"+orient.replace("2024.05.19 - 2024.08.21","2025.05.19 - 2025.07.21")); h=h.replace(/(src|href)="public\//g, "$1=\"https://huang-chenxi-portfolio.netlify.app/public/"); console.log(h);
+                                                                                                  ^
+Expected ',', got '='
+
+SyntaxError: Invalid regular expression flags
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.18.1
