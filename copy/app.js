@@ -38,12 +38,10 @@ const translations = {
     taipingTitle: "Taiping Reinsurance",
     taipingRole: "Underwriting Assistant Intern",
     taipingOne:
-      "Analyzed cedant business context, historical renewal data, and current performance to support treaty-renewal assessments.",
+      "Completed renewal-material analysis for 10 cedants, reviewing treaty wording and broker packs; assessed large-loss movement, claims mix, contract terms, profitability, and risk architecture to support renewal underwriting.",
     taipingTwo:
-      "Compared treaty structure and renewal terms through GNPI, combined ratio, and ROI, supporting quotation, wording, and negotiation preparation.",
-    taipingThree:
-      "Handled broker renewal correspondence and PAP setup for new and renewal business; tracked regional risk and climate developments for underwriting reference.",
-    teslaTitle: "Tesla",
+      "Distinguished proportional (QS, Surplus) and non-proportional (XOL) treaty risk features, and recorded treaty terms, structures, and business details in PAP for 25+ new and renewal cases.",
+        teslaTitle: "Tesla",
     teslaRole: "Business Operations Intern",
     teslaOne:
       "Configured and validated customer-facing store information for openings, closures, and service changes, including addresses, operating status, geofencing, and service functions.",
@@ -52,7 +50,7 @@ const translations = {
     teslaThree:
       "Supported contract administration for stores and charging operations, completing verification, stamping, filing, and system entry for 30+ items per day.",
     lnTitle: "Lingnan University",
-    lnDesc: "BBA, GPA 3.88/4.0, First Class Honours",
+    lnDesc: "BBA in Business Management - Risk and Insurance Management, GPA 3.88/4.0, First Class Honours",
     lnOne:
       "Scholarships from APEC, HKSAR Government, AR Charitable Foundation, and HKCGI Foundation.",
     lnTwo:
@@ -143,16 +141,15 @@ const translations = {
     hkuDesc: "市场营销硕士",
     taipingTitle: "太平再保险有限公司",
     taipingRole: "核保助理实习生",
-    taipingOne: "协助分析分出保险公司业务情况、历史续保数据与当期表现，为合约续保评估提供支持。",
-    taipingTwo: "结合 GNPI、综合成本率、ROI 与分保结构对比续保条件，为报价、条款调整及谈判准备提供数据支持。",
-    taipingThree: "对接经纪人续保邮件并完成新签、续转业务 PAP 开设；跟踪区域风险与气候变化，为核保判断提供参考。",
-    teslaTitle: "特斯拉",
+    taipingOne: "完成 10 家分出公司续保资料分析，审阅分保条及再保险经纪人提供的资料包，围绕大额赔案变动、赔付组合、合约、盈利表现及风险架构梳理关键信息，为续保核保判断提供支持。",
+    taipingTwo: "识别比例（QS、Surplus）与非比例（XOL）再保险合约的风险特征；在续保确认及合约签署后，完成合约条款、分保结构及业务信息的 PAP 录入，累计支持 25+ 笔新签及续转业务建档。",
+        teslaTitle: "特斯拉",
     teslaRole: "商务运营实习生",
     teslaOne: "围绕新店开业、闭店及门店服务调整，负责消费者端线上门店信息配置与校验，覆盖门店地址、营业状态、地理围栏及服务功能，保障线上展示信息与线下实际运营同步。",
     teslaTwo: "创建 100+ 供应商代码，梳理供应商准入材料与审批节点，协同法务、财务推进审批流程；完善实习生运营 SOP，降低交接与重复沟通成本。",
     teslaThree: "支持特斯拉各类门店及充电业务的合同管理，完成 BD 签署合同的核验、盖章、归档与系统录入，日均处理 30+ 份材料。",
     lnTitle: "香港岭南大学",
-    lnDesc: "工商管理本科，GPA 3.88/4.0，一等荣誉学位",
+    lnDesc: "工商管理 - 风险与保险管理本科，GPA 3.88/4.0，一等荣誉学位",
     lnOne: "获得 APEC、香港特别行政区政府、AR 基金会、HKCGI 基金会等奖学金。",
     lnTwo: "担任商科课程、运营风险管理及师生咨询相关学生代表。",
     campusTitle: "岭南大学",
