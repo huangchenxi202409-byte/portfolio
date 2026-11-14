@@ -205,14 +205,23 @@ const buildTypingName = () => {
   });
 };
 
-const setActiveView = (view) => {
-  document.querySelectorAll("[data-view-panel]").forEach((panel) => {
-    panel.classList.toggle("is-active", panel.dataset.viewPanel === view);
+const setActiveView = (view, { updateHash = true } = {}) => {
+  const panel = document.querySelector(`[data-view-panel="${view}"]`);
+  if (!panel) return;
+
+  document.querySelectorAll("[data-view-panel]").forEach((item) => {
+    item.classList.toggle("is-active", item === panel);
   });
 
   document.querySelectorAll("[data-view]").forEach((control) => {
     control.classList.toggle("is-active", control.dataset.view === view);
   });
+
+  if (updateHash && window.location.hash !== `#${view}`) {
+    window.history.replaceState(null, "", `#${view}`);
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 const applyLanguage = (language) => {
@@ -227,6 +236,14 @@ const applyLanguage = (language) => {
 
 document.querySelectorAll("[data-view]").forEach((control) => {
   control.addEventListener("click", () => setActiveView(control.dataset.view));
+});
+
+const hashView = window.location.hash.slice(1);
+if (hashView) setActiveView(hashView, { updateHash: false });
+
+window.addEventListener("hashchange", () => {
+  const nextView = window.location.hash.slice(1);
+  if (nextView) setActiveView(nextView, { updateHash: false });
 });
 
 document.querySelector(".lang-toggle").addEventListener("click", () => {
