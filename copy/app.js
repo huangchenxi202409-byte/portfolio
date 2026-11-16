@@ -89,7 +89,7 @@ const translations = {
     aiKicker: "AI Learning Library",
     aiTitle: "How I am learning to work with AI.",
     aiBody:
-      "A small library of practical AI learning areas I am building for business research, operations, communication, and personal productivity.",
+      "A growing library for business research, operations, communication, and personal productivity — including my ongoing exploration of AI-assisted interactive web experiences.",
     aiOneTitle: "AI for career competitiveness",
     aiOneBody:
       "Certificate-backed learning on how AI changes workplace skills, decision speed, and personal productivity.",
@@ -102,6 +102,9 @@ const translations = {
     aiFourTitle: "Visual communication",
     aiFourBody:
       "Applying Canva, video editing, and AI-assisted storytelling to make business ideas easier to understand.",
+    aiFiveTitle: "Interactive web exploration",
+    aiFiveBody: "Exploring how AI-assisted interaction design can make information feel more intuitive, engaging, and memorable.",
+    aiFiveCta: "Open the interactive experience",
   },
   zh: {
     navIntro: "简介",
@@ -176,7 +179,7 @@ const translations = {
     aiKicker: "AI 学习库",
     aiTitle: "我如何学习与 AI 协作。",
     aiBody:
-      "这是一个面向商业研究、运营协作、沟通表达与个人效率的 AI 学习版块，会随着我的学习继续补充。",
+      "这是一个面向商业研究、运营协作、沟通表达与个人效率的 AI 学习版块；我也会持续探索由 AI 辅助构建的交互式网页体验。",
     aiOneTitle: "AI 与职业竞争力",
     aiOneBody: "围绕 AI 如何改变职场技能、决策速度与个人效率进行证书化学习。",
     aiTwoTitle: "数据意识与商业研究",
@@ -185,6 +188,9 @@ const translations = {
     aiThreeBody: "用 AI 思维写出更清晰的 SOP、总结跨团队问题，并把重复流程变成可检查系统。",
     aiFourTitle: "视觉化沟通",
     aiFourBody: "结合 Canva、剪映与 AI 辅助叙事，让商业想法更容易被理解。",
+    aiFiveTitle: "交互式网页探索",
+    aiFiveBody: "持续探索 AI 辅助下的交互式网页设计，让信息呈现更直观、更有参与感，也更容易被记住。",
+    aiFiveCta: "打开互动体验",
   },
 };
 
