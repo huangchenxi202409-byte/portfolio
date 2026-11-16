@@ -921,6 +921,37 @@ svg {
   padding: 28px;
 }
 
+.library-card-link {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+  text-decoration: none;
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.library-card-link:hover,
+.library-card-link:focus-visible {
+  border-color: rgba(24, 216, 255, 0.72);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34), 0 0 34px rgba(24, 216, 255, 0.16);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.library-link-cta {
+  align-items: center;
+  color: var(--cyan);
+  display: inline-flex;
+  font: 500 12px/1.4 var(--mono);
+  gap: 8px;
+  margin-top: auto;
+}
+
+.library-link-cta::after {
+  content: "↗";
+  font-size: 18px;
+}
+
 .card-icon {
   align-items: center;
   background: rgba(24, 216, 255, 0.16);
